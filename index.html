@@ -5,64 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css.css">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-    <div class="collapse" id="navbarToggleExternalContent">
-
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-    
-        
-      <nav class="navbar navbar-dark bg-dark">
-        
-
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-           
-          </button>  
-
-          <div class="b">  
-            <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZZJREFUSEu1ldtNAzEQRW86gU6gEqASoBKgEqAS6AR0kE808U522Y9YirKP8dyHr72HXHgcLtw/awBXSe6S3CThmt/3IPSR5DMJ/z5ruZ4DeEly/w91NH9N8nyutgN4H6yZA0Mnc62Sqo46gG47NTMArGHPhIcBQANtElRbAIKQ9i1AZoCfIZVCGNMYQBrUwbu3YY9qnjolFeAxCUV4Cnsmfo2uMKZpVSMJnlELEQhRx7u/UQFcWJoDQnMmAjovopbwDzHfYxfjaFUHIDPtmmto5hpIyiQBqNKFAtMzA1yPhsinpiamLnKn9MQi18DCziKfVRDntVGt8mXoIjkRqargeg3Y9TsmrgLU1GhTx67aIrD75yRBc4q4rxvNJHSMXdzqu3VV7eKwM89Gzdy72eYFr/bNMV+kSN/qqem1VlULUFtPU9W7Uc8CCOQZ45nUWlDOD0NyYv3a98B9oc9zjN3FxNOdXNVvKqgbC+/nGM/39TBsYzoXGFsYAsCox0f3fgGy9U2ez6Ot+90Arew9D7cU7OnV1v4CK4KMGYW7fUUAAAAASUVORK5CYII="/>
-         <h1>Tinyone</h1>
-          </div>
-           <div class="f">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAW1JREFUSEvFlctNBEEMRGuT4ApEwnLhTgAIiIRFBAKEwQmIhM+FMxGAHnKNrBlPb6/QaFtarUbtdpWry+6VFl6rhfNrbwBHki4lreM3V+h7bLxIupXk7yG+quBK0n1EcIDDrQUZiBD7EECzAAS/RdLTHe6Hc88Rf51JjSuAORUcV+UWgBfB+FvSeUVuDAB7Sq3YA3woCbavIceZpCdJn7HnKobzY4CfOEiZXiSkMnTOCyJ3kr4kHUh6DJmIR4G/1QMAK5JvQg47jG9AhmRBhEqHvNsA7CgnzxV4DznsNN9hEyAna126HVfFdwPchDRzruLO/gWA9txBJZHBMQQNxuqSiGC7yA7i312aLxnts6V3BoBVy6Ykz/NnK8CkUaJ0z5uTSPiRZMnOmjRqNSrQfcysZyzZVVniSaM5yONiMn5nkLKMuS/KB8cNlGd9z7gmJjuqHBV5/mBDa98C8JvBLJq8HXt7MnsutStm8Qp+AR7saBkJBmbsAAAAAElFTkSuQmCC"/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWFJREFUSEu1lYtNw0AQRCedQCWBSiCVECqBVAJUAp0Evej2NPezz5F8kmXZ3t3Zmf34oJ3PYef4mgF4knSUxJ3rL13fkn4kcR+eJYAHSR8p6FIMAJ8TaGM3AniTdN4gHyCfkt5rnx7Aa8p8Q/xsSlIFSA2ALL/JHG1Pkl6MDZlysOMQkDrAOOqDT65LDfBlmkMZ4wgYwXvPLil2j8HJAWppHGBNLpoB/zgU/cZiCSAbrUVPkoW0Id2tFg7gWRQ0JwAwcXnJngQLADKI4mWDyeCYdRN0Bg5wDwP3z8k7gFO8B+BqbHODOEA9vVu6aOjrAAwKLPw0k1l9p2Y+iIttGp2AEwPGBgUgtifvfNhcUsctGmS0KmJDxgqIteGB6uFqsq/bNAxCzzV5ehsXltQun7V1HfJcase04HylN8FHDALdfzg9NsGAJIoNOsPAbWK6vcB8H70vGm3mn7xhW7SmuwP8A1l7WBkuClHSAAAAAElFTkSuQmCC"/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQtJREFUSEvFldENwjAMRK+bwCYwCTAJMAkwCWwCo6AnJSg1dhvRRPgnUhv77PP1OqhzDJ3r6xeAi6R9auwlaT3V5FIAagMAkBstAK6SDj0BqH2SdPZAWkyQ6z4k3SRxfihrCZCBRpT9HWAlaSeJM49vZbpNd5Au96om4OI9JeTRUQrJU98BeSPJehRtUnErihqALyF5AE/TOUl0hQznJpgFgEcoKKUHx2UssooymaLehIsAWCw7ICILaAYQOWW5o0kf8iiwO7Aec0y+4361NV6EjumwDLokoI73ZUxadbREO4XXGM9CBy0TIi+yVFiQquLRBLlY9qHsMSwduvCk8A9mO/nFTSPK3OfdAd5UoUIZYKoiXgAAAABJRU5ErkJggg=="/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPxJREFUSEvVlesNAjEMg32bwCYwCTAJMAkwCWwCm4A+1KB7NG3uRwVUQscjimPHNZ0an65xf/0MwFbSXtIiMb5Jukji+SipEGFwlbRymgCwK4HUAJj6UNkTvx+9mhrAM2iCpceiBIDe95YA6I7+kbNOC5/Ulhg0A8CSmzRRbcE28TlZGOvy/nNyDMaej0hkNROpShJFLGqNXat+DWCORY1F9i7kGMxxz3g/E5A+AI3R3cud6LLJJ6KD5yCuaXzqJWa04bgOm1rSuv8HRIRFcxSI2Mamg/j2XAQbACjm0tlnb1r7/i1L7aLlJrb9AMprIEOJYi2uo/K4df8P8AIsTC8ZteaEzAAAAABJRU5ErkJggg=="/>
-      
-           </div>
-        </div>
- 
-      </nav>
-
+    <nav>  
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATJJREFUSEvNlGFNA0EQhb8qABSAg+KgoABwQBUADkABOAAUAAooDsABDgAFbb5k0tBje7vT9BLmzyV3c+/NvLf7Rgxco4Hx2ZRgF7gFToG9viE3IRD8FTgE3oCjbRPcARcBegzMtk3wCewDU+Ch5mFNImWYAN8hh+DXMfVOyOQ7pfL5p9YRqPNTQd/3ANLcbindVfflOgKBxrX1O99/4lSteFIiOAfuk+C2Fw0vETiBumfqEXCwJg/mGeTovQnz/weBR9IjmKmXMLhpg2fgJIMevc0mX0aQZTnc3H81fFmlU+Ql+8qiR/9H3O5eAj/+DrQM1xmgxFUCtzBbMmYXo7sv7Mx5c7+ljImDCMWV/lqaSmIkG8+a5y13M1PWwPPGe0Q1N5WmLVM39dQ2aALpaxqcYAHa1DMZlJLsFwAAAABJRU5ErkJggg=="/>       
+        <ul>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+        <br><br>
+    </nav>
+    <div class="div">
+        <h2>iPhone SE</h2>
+        <h3>Form $16.62/mo.*or $399</h3>
+    </div>
+    <hr>
+    <p class="pp">Pay for your new iPhone over 24 months at 0% APP with Apple Card Monthly Installlments and continue to app. <a href="#">Learn more</a> </p>
+    <br><br><br><br>
     <div class="box">
-        <div class="text">
-          <h1>  Inspire your ldealizator</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatibus ab reiciendis! <br> Aperiam inventore ex deleniti, libero tempora architecto quaerat?</p>
-        </div>
-        <div class="box2">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQlJREFUSEvVle1Nw0AQBcedhE5IJSGVAJWQVAJUEqgENJIPWfbehw/7R1aKLPnOO3vv7W0Gdo5h5/z8B/AMPAEPpSJ7Ae/AI3ABzlsD3sbKzXsEPrYG3IDDWLknKEZNIhMphZGSqf0n8AWcgO/J2gJWAkylSB+a1F+CTt9bwOuckAMkE2sKzNftKAv4iwhg61n92ggNjwCRNDVYtl0jQOqSWtLp+kukvxsiwM+azOPeVYAeg71setDUpj0emLjZ5N4usj0XdyHywNur0T2xkCp30XpPsZApB/AUmu2zNUKjS7NojVTqH/7xtExTp6fDzQpN5CQV7iT1vXfgOp9B6dg1QKs82X33D/gFYfowGUEZbvIAAAAASUVORK5CYII="/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQFJREFUSEvtlIsNwjAQQ91NYBIYBSYBJgEmASYBNkFPilF/yUWqikAiEmpp0/P57LjRzKuZub6+AmAtaSXp0GO7k3STdC1NoZbBXdJJ0iL9KLqRtIxGXAMAg0umEACPKQzomO7pGKD28rMiSMSAOe+DMfC+r8/7kxwAnbMA8H0OByYAwHAg+BiAu2azRS2RQAOLvk1mKDI4JodYvIhBex9OA+QP0JHkoyMaWHbMRYiKk86SELxGZGzqvOqc7Oig2VGRTbOZFAFQmFADiIUN/YzrwPf9TmoAnEd869jwdXLYUbQP8GwxChsMNyTKjmufUv4TD51TOyZULUAQqPnXvw/wAtCCPRm9zt9uAAAAAElFTkSuQmCC"/>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAL1JREFUSEvtlYEJg0AMRZ+T2E3sJtJJSicRJ2lH6SaWyKWE2BgLPajggcidJj/J/fw0VF5NZf/8NcCpZH8GWkD28sj+HXiWgXXyKMZ9ea9VNwS4ukiskwuwxbnYhADTSlgHwFyc/ZfoDjyDix6BrrAsEwAhxLx8HwzG0gMJgDZVBnCLAPZ/B0cGi7v9xCKVXVVSNfqJFln6WamWc6GtqqkH97TdPA8iviuAZmsb8KuBkzVU+j2baKmD7IfqAC/QTyQZzP26YQAAAABJRU5ErkJggg=="/>
+        <div class="div1">
+            <img class="rasm" src="-6013858752148647474_121.jpg" alt="">
+            <br><br>
+            <div class="lo2">
+                <div class="fee">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAX1JREFUSEvNlU0yBEEQhb+5gZUtToATYGOLA4jgBm6AEwg7O5zAWFrhBDgB4QJ+LkB8olLUVJTumkXHyIiKmumuypf5MvP1iIFtNLB/ZgawCBwCK2l1JfoIuE7TPnG2lsEecJ5O3QPvtYvpvQHMAWvp/z5wkSOUAF54AHS8nZy3lMmMx8AysJoHVAKIrmMvGHmf7QLHwAewAzwDl4As/FgJ8AK41iueBTZCTc6vgU3gBngFFoC7tC/9BfCVinWQAcjxbaXYOjsDPoH5FLnPrMdv4GUGApjyUQZgtFJm2vKsmY10Wq+N7OzUADq6SvyG8/AX3Sb38W5qADNxHmrtLHVvRcb/D2BwiqIlbUE5tzU1f58AT0VLN1GkppRt6sWYgShybdp7AfoGTSmJrMqu8rkAtrSrOsn29hbgJLZIRT7wOu2VihA7I1EZzajFdO68eL9T7KKAIdcCdcl1aFbsvXId0RqJhfaiHdRlKqmBOJTKyoTN7JPZwnvTmcEz+AZJz2cZU1H38wAAAABJRU5ErkJggg=="/>            
+                    <p>Fast, free,no-contact <br>
+                    delivery</p>
+                </div>
+                <div class="fee">
+                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAX1JREFUSEvNlU0yBEEQhb+5gZUtToATYGOLA4jgBm6AEwg7O5zAWFrhBDgB4QJ+LkB8olLUVJTumkXHyIiKmumuypf5MvP1iIFtNLB/ZgawCBwCK2l1JfoIuE7TPnG2lsEecJ5O3QPvtYvpvQHMAWvp/z5wkSOUAF54AHS8nZy3lMmMx8AysJoHVAKIrmMvGHmf7QLHwAewAzwDl4As/FgJ8AK41iueBTZCTc6vgU3gBngFFoC7tC/9BfCVinWQAcjxbaXYOjsDPoH5FLnPrMdv4GUGApjyUQZgtFJm2vKsmY10Wq+N7OzUADq6SvyG8/AX3Sb38W5qADNxHmrtLHVvRcb/D2BwiqIlbUE5tzU1f58AT0VLN1GkppRt6sWYgShybdp7AfoGTSmJrMqu8rkAtrSrOsn29hbgJLZIRT7wOu2VihA7I1EZzajFdO68eL9T7KKAIdcCdcl1aFbsvXId0RqJhfaiHdRlKqmBOJTKyoTN7JPZwnvTmcEz+AZJz2cZU1H38wAAAABJRU5ErkJggg=="/>
+                    <p>Free Personal Session</p>
+                </div>
+                <div class="fee">
+                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAX1JREFUSEvNlU0yBEEQhb+5gZUtToATYGOLA4jgBm6AEwg7O5zAWFrhBDgB4QJ+LkB8olLUVJTumkXHyIiKmumuypf5MvP1iIFtNLB/ZgawCBwCK2l1JfoIuE7TPnG2lsEecJ5O3QPvtYvpvQHMAWvp/z5wkSOUAF54AHS8nZy3lMmMx8AysJoHVAKIrmMvGHmf7QLHwAewAzwDl4As/FgJ8AK41iueBTZCTc6vgU3gBngFFoC7tC/9BfCVinWQAcjxbaXYOjsDPoH5FLnPrMdv4GUGApjyUQZgtFJm2vKsmY10Wq+N7OzUADq6SvyG8/AX3Sb38W5qADNxHmrtLHVvRcb/D2BwiqIlbUE5tzU1f58AT0VLN1GkppRt6sWYgShybdp7AfoGTSmJrMqu8rkAtrSrOsn29hbgJLZIRT7wOu2VihA7I1EZzajFdO68eL9T7KKAIdcCdcl1aFbsvXId0RqJhfaiHdRlKqmBOJTKyoTN7JPZwnvTmcEz+AZJz2cZU1H38wAAAABJRU5ErkJggg=="/>
+                    <p>Free and easy retuns</p>
+                </div>
+            </div>
+            <hr>
+            <div class="hv">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOZJREFUSEvtle0RwUAQhp9UQAeohBKUQAdK0AEd0IIOdIIOqIB5My5zidzGztz55f5md5/ddz9SUfhVheNjARbAAZg6k7gCa+AsPwsgw4kzeDCX72wI4I2tSo/A/O1YJ5+7B4JcUoAsmgPPFCCL5hagRXY0oOuXrOAPCBP5E4lu4QLEe5CrB5rGVd+pyAVoDWCJCpKAOzDqzH9IYGjLG827+xNXoCA6VvEF1UXcAUtj8RS80dwCxN9CP1TVGHgAe2Dr2PDaNHVNA0A2J2ADaDrczwKYpX9LSgEkhVuOPmjuH84HozjgBdJKOBlNP3byAAAAAElFTkSuQmCC"/>
+                <p>Have questions about buying an iPhone? <br>
+                <a href="#">Chat with and iPhone Specialist</a></p>
+            </div>
             
         </div>
-        <div class="tex">
-          <div class="d"></div>
-          <div class="d"></div>
-          <div class="d"></div>
+
+        <div class="div2">
+            <h3>New</h3>
+            <h1>Buy iPhone SE</h1>
+            <p>Get up to $170 off with trade-in* </p>
+            <a href="#">See how Apple Trade In works</a>
+            <br><br><br>
+            <h4>Choose your finsh.</h4>
+
+            <div class="logo">
+                <fieldset>
+                    <div class="lo1">
+                        <div class="logo1"></div>
+                        <h4>(PRODUCT)RED</h4>
+                    </div>
+                </fieldset>   
+                <fieldset>
+                    <div class="lo1">
+                        <div class="logo2"></div>
+                        <h4>white</h4>
+                    </div>
+                </fieldset>
         </div>
+        <fieldset>
+            <div class="lo1">
+                <div class="logo3"></div>
+                <h4>Black</h4>
+            </div>
+        </fieldset>
+        
+        <br><br>
+        <div class="dd">
+            <h4>(PRODUCT)</h4>
+            <p>Every iPhone SE (PRODUCT)RED purchase now <br>
+            contributes directly to the Global Fund to combat <br>
+        COVID-19.</p>
+        </div>
+        <hr>
+        <div class="bb">
+            <h3>Choose your capacity.</h3>
+        </div>
+
+        <div class="gb">
+            <div class="m">
+                <h1>64<span>GB**</span></h1>
+                <p>Form $16.62/mo* <br>
+                or $399</p>
+            </div>
+            <div class="g">
+                <h1>128<span>GB**</span></h1>
+                <p>Form $18.70/mo* <br>
+                    or $449</p>
+            </div>
+
+        </div>
+        <h1></h1>
     </div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbtJREFUSEu1le0xRkEMhc9bASpABagAHdABFaACVIAK6AAVoAJ0QAWogHnuJHcy2b1rZ7j5405sck5OPt6FZrbFzPnVA7AnaUPSjqRNI/Qi6VESf+9bJFsAJLsOSafyAHJoYMWbKYAzSaf2+l3SpTF+Nt+uVXQgadV8xJxnhBpATH4l6TgEfdt3jAP8yPwnRmYMyQDI4ix5RPmw/bSIDLAs6SHJuBXlygAkpKEwp6l844MlcuDDaDA+qoXUq/mohPeADBYBmJZbSWi+Jgl2JAKkZSQHmCrfrCf7ku4ygGtPo/jGYM0kfVkvCCIRfipYkjQmszcX1uwhR6wAttumOd8uBb6YxKtx8Kcgnfdw9EUAmMGoZrVpQ8KPiffkWskV/CcAkkKgKlEcM5etVyKazdhWJfImx2Vxnb2xBPo3zYRlBC8GpTamjNq6Beclqkkel7E5pgTHRWN6fIlgxsnAh1GJL5ovIz4Wjb3wq1uc63wq4hKRuHYq8jI2TwVJ4rGDJT1x+/Ox80QRBF1v7Gz4AsISuZCNs4IVlzSPaW4gcpG45xYxbfSvsN6fTMCmfjKHozZlPQCt+F//NzvAD2zjehnhxHqKAAAAAElFTkSuQmCC"/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAM9JREFUSEvtld0NwjAMBq8TwAawAbABbAKTwSaFDWAENmAD0IdU5KZp/tqKB8hr47vGTuyKiVc1MR+fYA7UwDpTfgV2wMPGuYJSeMPsSKzAwm/A1v2bwIkUewZWQEtiBfqgDWMssTYCWcFzDLJhvNl/QSir2Slyr3SsZj8iOAGHyPXdA0fPnuQUhSR98M8TSH0HPkkIni1QgJXE4EWCRnLpyblbhuQalLaojkCDYlZKc+LuwNJtdur/yvNioERw1UjzwTsyB/Lb4V8Z+qOe4AX3Yy0ZoDrO2QAAAABJRU5ErkJggg=="/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMpJREFUSEvllcsRwjAMBTcVQAfQAdABdEJnQCVQApRAB3QA85hkRjbGH+wMh/iSQ6RdW4mljpFXNzKfkGAOnIF1ofwK7ICHzfMFv8IH5ofECiz8Bmz93UROpNwLsAIciRXohQJaLLE2AlnBswXZMN7s6QlO/cc8ZJSzuESC73uwnilJkcDCh82nJNmCEDxHkiWIwVOSLEGsraTuzQQFGb++E1JcomqBBsWslPIl/g4s/Wan/n8EFpUSwXUJNR+CI7OS76b/Zeg3PcELlBwtGYXYYFcAAAAASUVORK5CYII="/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALxJREFUSEvtldERwiAMQB8TtBvoBuoGuomjuYmOUEdwAzdoL569CxilQOmP5TfkvQC54Ki8XGU+lqAFrsA+Ud4BJ+Cp80JBLnxkfki0QMPvwDGs5seJJPcG7ABPogUSkA1zLGEdBKQF/RxkxXixLUFpZ42F/onAO67xRlY86YoWE8Qa7GuzxLpoautmC2KVW/GkN1gFy44K+SianEs3ch7ANhx2Mv8vwKZQIvDz+38wv8xCvp9eOpqjxVQXDF0wMhkQuQtPAAAAAElFTkSuQmCC"/>
 
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbVJREFUSEu1lYExBEEQRf9FgAjIABGQASJABIgAESACREAGyIAMZIAIqLfV/6qva3btKjdVVzfTO9O/+//umZmWPGZL9q8pALuSziVtSDqW9DwmuDEAOMTxUXEIwJmk1yGgIYBVSSeSLsLBV5pjWwn7naRLSe8toD6A04gaEI8DSY+xwO49mD4lXUu6ifn8UAXYl3QVPLPpXhLcr8cJaIF/Rwt9ZHMY3wECmHPdyABEtxf2lzhoITmUaSFaaMEhgyD4vhNrdNmuAN+JDhzjIFcKtOAEXUwLa2hxhfG/EHzOwACIOSQgtCCso4UubIx8tvPdAlgbISDZ3EpCMw8yhrqPTH8LwLY+AU1VrrAcrJnozaBWVhXQEbsQnkrBTAawQzoZWhiUKjowFhzW9RBFid75tDrjA5VGNbnifs0gd2wFaQHkPYj+0CcyzbEZH1t90KLDzmsfvEnaqmXKGp4ptb4+qBnUm5Y+oOutT/M98EXGRgO5Y13j9Eq9aQmMn6+PLruh67rVB659nHjOxUYAk67rLBxcEpmvhtwHZPnnB6dWEEKaW7T6tyez1Q+jbWPe5NHOWht/ACgGaxmb7/TKAAAAAElFTkSuQmCC"/>
+    
 
-    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
